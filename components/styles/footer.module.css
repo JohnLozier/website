@@ -1,0 +1,46 @@
+#container {
+	height: 25vh;
+	background: #313131;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 1;
+}
+
+#socials {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: auto auto;
+	margin-bottom: 10px;
+}
+
+#linkContainer {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: auto auto auto;
+	grid-gap: 25px;
+}
+
+.links {
+	color: white;
+	width: fit-content;
+	text-decoration: none;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.image:hover, .links:hover {
+	opacity: 0.8;
+}
+
+.image {
+	height: 4em;
+	display: block;
+	opacity: 1;
+}
+
+.image > svg {
+	height: 100%;
+}

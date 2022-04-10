@@ -1,0 +1,23 @@
+#container {
+	scrollbar-width: none;
+	background: #ffffff;
+}
+
+#title {
+	text-align: center;
+	font-size: 4em;
+	margin: 0;
+	background: #001a7f;
+	color: white;
+	text-shadow: 0 5px 0 #bbb;
+	padding-bottom: 10px;
+	font-family: Segoe UI;
+	letter-spacing: -0.03em;
+}
+
+#projects {
+	display: grid;
+	justify-items: center;
+	margin: 50px 0;
+	grid-gap: 20px;
+}

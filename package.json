@@ -1,0 +1,23 @@
+{
+	"name": "website",
+	"version": "1.0.0",
+	"description": "My website/blog",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build && next export"
+	},
+	"author": "John Lozier",
+	"dependencies": {
+		"@svgr/webpack": "^6.2.1",
+		"eslint-plugin-next": "0.0.0",
+		"gray-matter": "^4.0.3",
+		"next": "^12.0.10",
+		"react": "^17.0.2",
+		"react-markdown": "^8.0.0",
+		"react-syntax-highlighter": "^15.5.0",
+		"rehype-katex": "^6.0.2",
+		"remark-gfm": "^3.0.1",
+		"remark-math": "^5.1.1"
+	}
+}

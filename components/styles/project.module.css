@@ -1,0 +1,61 @@
+.container {
+	width: 90vw;
+	display: flex;
+	grid-gap: 50px;
+	align-items: center;
+	background: #ebeef2;
+	padding: 3%;
+	border-radius: 10px;
+	max-width: 900px;
+}
+
+.github {
+	border-radius: 100%;
+	cursor: pointer;
+	transform: translate(-50%, 3.5em);
+}
+
+.github:hover {
+	opacity: 0.8;
+}
+
+.title {
+	margin: 0 0 0 30px;
+	font-size: 2em;
+	font-weight: 400;
+	color: #393939;
+}
+
+.line {
+	width: 60%;
+	display: block;
+	background: #001a7f;
+	margin: 0 0 10px -2%;
+}
+
+.text {
+	margin: 0;
+	color: #2b2b2b;
+}
+
+.textContainer {
+	flex: 1;
+}
+
+.imageContainer {
+	flex: 0.7;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-bottom: 1.2em;
+}
+
+.subImageContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+@media (width < 600px) {
+	.container {
+		flex-direction: column;
+	}
+}

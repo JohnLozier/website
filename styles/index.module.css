@@ -1,0 +1,26 @@
+#container {
+	scrollbar-width: none;
+	background: #000000;
+}
+
+#contentContainer {
+	background-color: white;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-row-gap: 15vh;
+	z-index: 1;
+	position: relative;
+}
+
+.divider {
+	display: block;
+	z-index: 1;
+	position: relative;
+}
+
+@media screen and (width > 300px) and (width < 700px) {
+	#contentContainer {
+		grid-template-columns: auto;
+		grid-row-gap: 0;
+	}
+}

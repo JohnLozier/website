@@ -1,0 +1,77 @@
+#container {
+	scrollbar-width: none;
+}
+
+#title {
+	text-align: center;
+	font-size: 4em;
+	margin: 0;
+	background: #ac0000;
+	color: white;
+	text-shadow: 0 5px 0 #bbb;
+	padding-bottom: 10px;
+	font-family: Segoe UI;
+}
+
+#postContainer {
+	margin: 50px;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(30em, 1fr) );
+	grid-gap: 25px;
+	justify-items: center;
+}
+
+.post {
+	width: 30em;
+	background: #f2ebeb;
+	height: 25em;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	box-shadow: 0 15px 10px -10px #c0b8b8;
+	text-decoration: none;
+}
+
+.postTitle {
+	margin: 10px 0 0 30px;
+	width: fit-content;
+	font-size: 2em;
+	font-weight: 400;
+	color: #393939;
+	letter-spacing: -0.03em;
+}
+
+.post:hover {
+	background: #f3e5e5;
+}
+
+.postLine {
+	width: 90%;
+	color: #ac0000;
+}
+
+.postSummery {
+	margin: 5px 40px;
+	color: #2b2b2b;
+}
+
+.postdate {
+	width: fit-content;
+	margin: auto 10px 10px auto;
+	font-size: 1em;
+	font-weight: 100;
+	color: #4d4d4d;
+}
+
+@media screen and (width < 600px) {
+	.post {
+		width: 90vw;
+	}
+
+	#postContainer {
+		grid-template-columns: auto;
+		grid-gap: 10px;
+		margin: 5px;
+	}
+}
