@@ -11,7 +11,6 @@ import CryptoPrices from "../assets/svg/cryptoPrices.svg";
 import Logo from "../assets/svg/logo.svg"
 import HomepageOverlay from "../assets/png/homepage.png";
 import BlogOverlay from "../assets/png/blog.png";
-import Favicon from "../assets/favicon.ico";
 
 const Projects = () => {
 
@@ -21,7 +20,7 @@ const Projects = () => {
 		<div id={ styles.container }>
 			<Head>
 				<title>Projects</title>
-				<link rel="icon" type="image/x-icon" href={ Favicon.src }/>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 			</Head>
 			<Menu overlay={ overlay }/>
 			<Overlay overlay={ overlay } sides={ [["Homepage", "/", "Links + More Info", `black url(${ HomepageOverlay.src }) no-repeat scroll center / cover`, "contain"], ["Blog", "/blog", "Current + Upcoming Projects", `black url(${ BlogOverlay.src }) no-repeat scroll center / cover`, "contain"]] }/>

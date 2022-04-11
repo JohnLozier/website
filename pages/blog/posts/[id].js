@@ -17,7 +17,6 @@ import Overlay from "../../../components/overlay";
 import ProjectsOverlay from "../../../assets/png/projects.png";
 import HomepageOverlay from "../../../assets/png/homepage.png";
 import Back from "../../../assets/svg/back.svg";
-import Favicon from "../../../assets/favicon.ico";
 
 const Post = ({ post, title, date }) => {
 
@@ -27,7 +26,7 @@ const Post = ({ post, title, date }) => {
 		<>
 			<Head>
 				<title>{ title }</title>
-				<link rel="icon" type="image/x-icon" href={ Favicon.src }/>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 			</Head>
 			<Link href="/blog"><a id={ styles.back }><Back/></a></Link>
 			<Menu overlay={ overlay }/>

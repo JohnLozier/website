@@ -15,7 +15,6 @@ import Projects from "../assets/svg/projects.svg";
 import Error from "../assets/svg/error.svg";
 import ProjectsOverlay from "../assets/png/projects.png";
 import BlogOverlay from "../assets/png/blog.png";
-import Favicon from "../assets/favicon.ico";
 
 const Fof = () => {
 
@@ -31,7 +30,7 @@ const Fof = () => {
 			</span>
 			<Head>
 				<title>John Lozier</title>
-				<link rel="icon" type="image/x-icon" href={ Favicon.src }/>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 			</Head>
 			<Menu overlay={ overlay }/>
 			<Overlay overlay={ overlay } sides={ [["Projects", "/projects", "Recent Blog Posts", `url(${ ProjectsOverlay.src })`], ["Blog", "/blog", "Current + Upcoming Projects", `black url(${ BlogOverlay.src }) no-repeat scroll center / cover`, "contain"]] }/>

@@ -10,7 +10,6 @@ import Overlay from "../../components/overlay";
 
 import ProjectsOverlay from "../../assets/png/projects.png";
 import HomepageOverlay from "../../assets/png/homepage.png";
-import Favicon from "../../assets/favicon.ico";
 
 const Home = ({ posts }) => {
 	
@@ -20,7 +19,7 @@ const Home = ({ posts }) => {
 		<div id={ styles.container }>
 			<Head>
 				<title>Blog</title>
-				<link rel="icon" type="image/x-icon" href={ Favicon.src }/>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 			</Head>
 			<Menu overlay={ overlay }/>
 			<Overlay overlay={ overlay } sides={ [["Projects", "/projects", "Recent Blog Posts", `url(${ ProjectsOverlay.src })`], ["Homepage", "/", "Links + More Info", `black url(${ HomepageOverlay.src }) no-repeat scroll center / cover`]] }/>
