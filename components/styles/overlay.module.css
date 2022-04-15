@@ -50,7 +50,7 @@
 	text-transform: uppercase;
 	z-index: 1;
 	transition: transform 0.5s ease-in-out;
-	font-family: Segoe UI;
+	font-family: "Open Sans";
 }
 
 .subtitle {
@@ -61,7 +61,7 @@
 	text-shadow: 0 2px 0px rgb(71, 71, 71);
 	z-index: 1;
 	transition: transform 0.5s ease-in-out;
-	font-family: Segoe UI;
+	font-family: "Open Sans";
 }
 
 .image:hover > .subtitle, .image:hover > .title {

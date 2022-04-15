@@ -8,7 +8,7 @@ This blog post discusses the process and things I learned when making this websi
 
 ## First Experience
 
-This was my first time working with NextJS, and also my first time working with React other than a small part of the Canvas+ popup. It has been a great experience. Inline js, components and hooks makes the code a lot cleaner and easier to work with. However There are a few issues I have ran into annoyances with React. A slightly annoying thing with React is that it is run before page load, which means doing things such as accessing a element or the window will result in a `undefined` error. You can fix this by using `useEffect()`
+This was my first time working with NextJS, and also my first time working with React other than a small part of the Canvas+ popup. It has been a great experience. Inline js, components, and hooks make the code a lot cleaner and easier to work with. However, there are a few issues I have run into annoyances with React. A slightly annoying thing with React is that it is run before page load, which means doing things such as accessing an element or the window will result in an `undefined` error. You can fix this by using `useEffect()`
 ```js
 import { useState } from "react";
 
@@ -33,9 +33,9 @@ But as you can see this results in semi messy code, and can end up being quite a
 
 - ### Design Before Develope
 
-	The biggest mistake that I made when making the blog was not designing before developing. Because of this I ended up spending way too long redo each and ever component until I was satisfied. I probably ended up completely redoing the homepage 3-4 times because of this. However after learning this the other pages were finished very quickly.
+	The biggest mistake that I made when making the blog was not designing before developing. Because of this, I ended up spending way too long redoing each component until I was satisfied. I probably ended up completely redoing the homepage 3-4 times because of this. However, after learning this the other pages were finished very quickly.
 
-	The software I ended up using to create templates is [Figma](https://figma.com), which I must say for being completely free works extremely well for both prototyping and svg design.
+	The software I ended up using to create templates is [Figma](https://figma.com), which I must say for being completely free works extremely well for both prototyping and SVG design.
 
 - ### Document progress
 
@@ -43,4 +43,4 @@ But as you can see this results in semi messy code, and can end up being quite a
 
 ## Conclusion 
 
-Overall I did like React and NextJS a lot, and will probably use them in the future. I did find most of the process semi boring due to the lack of executable code, but had a good time none the less. I plan on doing mid length posts similar to this one, hopefully at least once a month (we'll see how that goes).
+Overall I did like React and NextJS a lot, and will probably use them in the future. I did find most of the process semi boring due to the lack of executable code but had a good time none the less. I plan on doing mid-length posts similar to this one, hopefully at least once a month (we'll see how that goes).

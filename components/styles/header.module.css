@@ -26,8 +26,8 @@
 	color: white;
 	font-weight: 100;
 	font-size: 2.3em;
-	margin: 0 0 25vh 0;
-	font-family: Segoe UI;
+	font-family: "Open Sans";
+	transform: translateY(-13vh);
 }
 
 #logo {
