@@ -26,6 +26,8 @@ jobs:
 
       - name: Building and exporting
         run: npm run build
+        
+      - run: cp .gitignore ./out
 
       - name: Deploying
         uses: JamesIves/github-pages-deploy-action@v4.3.0
