@@ -1,19 +1,18 @@
-import styles from "../styles/index.module.css";
-import React from "react";
-import Head from "next/head";
+import { Image, Text } from "../components/content";
 
+import BlogOverlay from "../assets/png/blog.png";
+import BottomDivider from "../assets/svg/bottomDivider.svg";
+import Footer from "../components/footer";
+import Head from "next/head";
 import Header from "../components/header";
-import { Text, Image } from "../components/content";
+import Hobbies from "../assets/svg/hobbies.svg";
 import Menu from "../components/menu";
 import Overlay from "../components/overlay";
-import Footer from "../components/footer";
-
-import TopDivider from "../assets/svg/topDivider.svg";
-import BottomDivider from "../assets/svg/bottomDivider.svg";
-import Hobbies from "../assets/svg/hobbies.svg";
 import Projects from "../assets/svg/projects.svg";
 import ProjectsOverlay from "../assets/png/projects.png";
-import BlogOverlay from "../assets/png/blog.png";
+import React from "react";
+import TopDivider from "../assets/svg/topDivider.svg";
+import styles from "../styles/index.module.css";
 
 const Home = () => {
 
@@ -30,7 +29,7 @@ const Home = () => {
 			<Header/>
 			<TopDivider className={ styles.divider } viewBox="0 0 11 1" width="100%" height="100%"/>
 			<div id={ styles.contentContainer }>
-				<Text title="A little about me" text="Hi, I'm John. I'm a 7th grader that is interested in tech, software development, internet privacy, and crypto. I am currently most interested in front-end web development and cryptocurrencies/decentralization but plan on expanding my skill set. I also enjoy playing violin with orchestra, tennis, and math (especially algebra). You can find all of my current projects and what I'm doing <a href='https://github.com/J-The-Dev'>here</a>."/>
+				<Text title="A little about me" text="Hi, I'm John. I'm a 7th grader that is interested in tech, software development, internet privacy, and crypto. I am currently most interested in front-end web development and cryptocurrencies/decentralization but plan on expanding my skill set. I also enjoy playing violin with orchestra, tennis, and math (especially algebra). You can find all of my current projects and what I'm doing <a href='https://github.com/JohnLozier'>here</a>."/>
 				<Image image={ Hobbies }/>
 				<Image image={ Projects }/>
 				<Text title="Projects" text="My projects include: Canvas+ a chrome extension for the school website canvas that I made with <a href='https://github.com/adriancasares'>Adrian Casares</a> that adds features such as dark mode, search, and a lot more. Crypto Prices is another chrome extension that makes it easy to quickly check crypto prices, its features include dark mode, useful links, search, and even a 7-day graph. More projects coming soon..."/>
