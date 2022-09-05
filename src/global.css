@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body, #root {
+	height: 100vh;
+	width: 100vw;
+}
+
+@font-face {
+	font-family: "open sans";
+	src: url("../assets/fonts/OpenSans.ttf");
+}
+
+@font-face {
+	font-family: "montserrat";
+	src: url("../assets/fonts/Montserrat.ttf");
+}

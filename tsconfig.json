@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "esnext",
+		"explainFiles": true,
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"jsxImportSource": "solid-js",
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+	}
+}
