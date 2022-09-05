@@ -33,4 +33,4 @@ jobs:
 					branch: github-pages
 					folder: dist
 					clean-exclude: |
-						codetyper/
+						codetyper/*
