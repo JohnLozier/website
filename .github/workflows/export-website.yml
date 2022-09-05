@@ -1,36 +1,36 @@
 name: Export to website
 
 on:
-	# push:
-	#   branches: [ master ]
-	workflow_dispatch:
+  # push:
+  #   branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-	build:
+  build:
 
-		runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-		strategy:
-			matrix:
-				node-version: [ 16.x ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
 
-		steps:
-			- uses: actions/checkout@v3
-			- name: Use Node.js ${{ matrix.node-version }}
-				uses: actions/setup-node@v3
-				with:
-					node-version: ${{ matrix.node-version }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-			- name: Installing dependencies
-				run: npm install
+      - name: Installing dependencies
+        run: npm install
 
-			- name: Building and exporting
-				run: npm run build
+      - name: Building and exporting
+        run: npm run build
 
-			- name: Deploying
-				uses: JamesIves/github-pages-deploy-action@v4.3.0
-				with:
-					branch: github-pages
-					folder: dist
-					clean-exclude: |
-						codetyper/*
+      - name: Deploying
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: github-pages
+          folder: dist
+          clean-exclude: |
+            codetyper/*
