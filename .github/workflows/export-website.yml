@@ -1,4 +1,4 @@
-name: Export to website/codetyper
+name: Export to website
 
 on:
   # push:
