@@ -11,6 +11,7 @@ module.exports = {
 				"montserrat": ["Montserrat", "sans-serif"]
 			},
 			fontSize: {
+				"1.5xl": "1.3rem",
 				"20xl": "18rem"
 			},
 			transitionProperty: {
