@@ -1,7 +1,8 @@
 module.exports = {
 	content: [
 		"./index.html",
-		"./src/**/*.tsx"
+		"./src/**/*.tsx",
+		"./pages/**/*.tsx",
 	],
 	theme: {
 		extend: {
@@ -11,6 +12,9 @@ module.exports = {
 			},
 			fontSize: {
 				"20xl": "18rem"
+			},
+			transitionProperty: {
+				"top": "top"
 			}
 		}
 	}
