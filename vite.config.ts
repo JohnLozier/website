@@ -17,10 +17,11 @@ const Config = defineConfig({
 						source: `<!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="module" crossorigin src="/src/js/index.js"></script>
+	<script type="module" crossorigin src="/src/js/index.js"></script>
+	<link rel="stylesheet" href="/src/css/index.css">
 </head>
 <body>
-	<div id="root"></div>			
+	<div id="root"></div>
 </body>
 </html>`
 					})
