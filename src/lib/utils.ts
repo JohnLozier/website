@@ -2,7 +2,7 @@ import type { TimeString } from "../types/TimeString";
 
 export const getMs = (time: TimeString) => {
 	const [number, type] = time.matchAll(/\d+.?\d+|\w+/g);
-	console.log(number, type)
+	
 	return parseFloat(number[0]) * (
 		type[0] == "hs" ? 10 :
 		type[0] == "ts" ? 100 :
