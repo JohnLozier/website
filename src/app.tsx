@@ -1,6 +1,6 @@
-import "../src/global.css";
+import "./global.css";
 
-import { Navigate, Route, Router, Routes } from "@solidjs/router";
+import { Route, Router, Routes } from "@solidjs/router";
 
 import FourOFour from "../pages/404";
 import Index from "../pages/index";
