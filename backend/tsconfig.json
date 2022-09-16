@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"explainFiles": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"watch": true,
+		"outDir": "dist"
+	},
+	"include": [
+		"./**/*.ts",
+		"./**/*.js"
+	]
+}
