@@ -1,4 +1,4 @@
-import type { TimeString } from "../types/TimeString";
+import type { TimeString } from "../types/utils";
 
 export const getMs = (time: TimeString) => {
 	const [number, type] = time.matchAll(/\d+.?\d+|\w+/g);

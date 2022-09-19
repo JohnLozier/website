@@ -1,5 +1,5 @@
-import Construction from "../src/components/construction";
 import { MetaProvider as Head } from "@solidjs/meta";
+import Home from "../src/components/home";
 
 const Index = () => {
 	return (
@@ -7,7 +7,7 @@ const Index = () => {
 			<Head>
 				<title>John Lozier</title>
 			</Head>
-			<Construction />
+			<Home />
 		</>
 	)
 };

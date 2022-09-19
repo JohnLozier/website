@@ -10,13 +10,14 @@ module.exports = {
 				"openSans": ["Open Sans", "sans-serif"],
 				"montserrat": ["Montserrat", "sans-serif"]
 			},
-			fontSize: {
-				"1.5xl": "1.3rem",
-				"20xl": "18rem"
+			colors: {
+				"background": "#2E3131",
+				"highlight": "#272C2C",
+				"dark": "#242929",
+				"title": "#E8E8E8",
+				"text": "#939191",
+				"light": "#F1F1F1"
 			},
-			transitionProperty: {
-				"top": "top"
-			}
 		}
 	}
 };

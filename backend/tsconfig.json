@@ -1,14 +1,13 @@
 {
 	"compilerOptions": {
-		"esModuleInterop": true,
+		"target": "ES6",
+		"module": "NodeNext",
 		"explainFiles": true,
+		"jsx": "preserve",
 		"moduleResolution": "node",
+		"jsxImportSource": "solid-js",
+		"strict": true,
 		"allowSyntheticDefaultImports": true,
-		"watch": true,
 		"outDir": "dist"
-	},
-	"include": [
-		"./**/*.ts",
-		"./**/*.js"
-	]
+	}
 }
