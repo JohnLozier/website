@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc"
   },

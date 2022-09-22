@@ -2,7 +2,11 @@
 	"rewrites": [
 		{
 			"source": "/api(.*)",
-			"destination": "/api/dist"
+			"destination": "/api/"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "/"
 		}
 	],
 	"cleanUrls": true

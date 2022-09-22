@@ -2,9 +2,9 @@
 	"compilerOptions": {
 		"module": "NodeNext",
 		"target": "ESNext",
-		"outDir": "dist",
 		"strict": true,
 		"allowSyntheticDefaultImports": true,
 		"explainFiles": true
-	}
+	},
+	"include": ["./src/**/*", "index.ts"],
 }
