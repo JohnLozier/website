@@ -1,13 +1,10 @@
 {
 	"compilerOptions": {
-		"target": "ES6",
 		"module": "NodeNext",
-		"explainFiles": true,
-		"jsx": "preserve",
-		"moduleResolution": "node",
-		"jsxImportSource": "solid-js",
+		"target": "ESNext",
+		"outDir": "dist",
 		"strict": true,
 		"allowSyntheticDefaultImports": true,
-		"outDir": "dist"
+		"explainFiles": true
 	}
 }

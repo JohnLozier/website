@@ -1,0 +1,13 @@
+{
+	"rewrites": [
+		{
+			"source": "/api/(.*)",
+			"destination": "/backend/dist"
+		},
+		{
+			"source": "*",
+			"destination": "index.html"
+		}
+	]
+
+}
