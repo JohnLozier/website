@@ -1,5 +1,7 @@
+const Home = lazy(() => import("../src/components/home"));
+
 import { MetaProvider as Head } from "@solidjs/meta";
-import Home from "../src/components/home";
+import { lazy } from "solid-js";
 
 const Index = () => {
 	return (

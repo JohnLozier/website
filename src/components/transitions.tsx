@@ -1,20 +1,9 @@
-import type { JSXElement } from "solid-js";
+import { createVisibilityObserver } from "@solid-primitives/intersection-observer";
 
-// import makeIntersectionObserver from "@solid-primitives/intersection-observer";
+const isVisable = (ref: () => Element, threshold?: number) =>
+	createVisibilityObserver({
+		threshold: threshold,
+		rootMargin: "0px 100% 0px 100%",
+	})(() => ref());
 
-// // @ts-ignore
-// const { add } = makeIntersectionObserver([], entries => {
-// 	entries.forEach((entry: IntersectionObserverEntry) => {
-// 		console.log(entry.target);
-// 		// if (entry.isIntersecting) {
-			
-// 		// }
-// 	});
-// });
-
-const Transition = (props: { children: JSXElement }) => {
-	// add(props.children as Element);
-	return props.children;
-};
-
-export default Transition;
+export default isVisable;

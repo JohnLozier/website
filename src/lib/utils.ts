@@ -1,15 +1,15 @@
 import type { TimeString } from "../types/utils";
 
 export const getMs = (time: TimeString) => {
-	const [number, type] = time.matchAll(/\d+.?\d+|\w+/g);
+	const [number, type] = time.match(/[.\d]+|(\w+)/g)!;
 	
-	return parseFloat(number[0]) * (
-		type[0] == "hs" ? 10 :
-		type[0] == "ts" ? 100 :
-		type[0] == "s" ? 1000 :
-		type[0] == "m" ? 60000 :
-		type[0] == "h" ? 3600000 :
-		type[0] == "d" ? 86400000 : 1
+	return parseFloat(number) * (
+		type == "hs" ? 10 :
+		type == "ts" ? 100 :
+		type == "s" ? 1000 :
+		type == "m" ? 60000 :
+		type == "h" ? 3600000 :
+		type == "d" ? 86400000 : 1
 	);
 };
 
@@ -22,3 +22,7 @@ export const interval = (func: Function, time: TimeString) =>
 	setInterval(() => func(),
 		getMs(time)
 	);
+
+export const sameLine = (...func: Function[]) => {
+	func.forEach(node => node());
+};

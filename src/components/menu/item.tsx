@@ -1,0 +1,17 @@
+import type { Accessor } from "solid-js";
+import { Link } from "@solidjs/router";
+
+const Item = (props: { shown: Accessor<Boolean>, name: string, link: string, delay: number }) => {
+	let linkRef: HTMLHeadingElement;
+
+	return <Link class={ `-ml-screen duration-1000 delay delay-${ props.delay } group pointer cursor-none p-2 transition-[margin-left] block w-fit${ props.shown() ? " ml-0" : "" }` } href={ props.link }>
+		<h1 ref={ linkRef! } class="text-text uppercase font-monserrat text-xl font-bold w-fit">
+			{ props.name }
+		</h1>
+		<hr class="font-montserrat group-hover:text-4xl transition-size duration-700 ease-out border rounded-full" style={{
+			width: `${ props.name.length * 0.7 }ch`
+		}}/>
+	</Link>
+};
+
+export default Item;

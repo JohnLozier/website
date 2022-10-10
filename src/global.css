@@ -6,14 +6,15 @@
 html, body, #root {
 	height: 100vh;
 	width: 100vw;
+	cursor: none;
 }
 
 @font-face {
 	font-family: "open sans";
-	src: url("../assets/fonts/OpenSans.ttf");
+	src: url("../assets/fonts/OpenSans.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "montserrat";
-	src: url("../assets/fonts/Montserrat.ttf");
+	src: url("../assets/fonts/Montserrat.woff2") format("woff2");
 }

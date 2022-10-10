@@ -9,5 +9,8 @@
 			"destination": "/"
 		}
 	],
+	"github": {
+        "silent": true
+    },
 	"cleanUrls": true
 }
