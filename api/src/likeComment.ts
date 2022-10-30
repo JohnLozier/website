@@ -1,4 +1,4 @@
-import { Firestore, doc, increment, updateDoc } from 'firebase/firestore';
+import { Firestore, doc, increment, updateDoc } from "firebase/firestore";
 
 import type { Express } from "express";
 import type { RateLimitRequestHandler } from "express-rate-limit";

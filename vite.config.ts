@@ -12,6 +12,7 @@ const Config = defineConfig({
 		port: 3000
 	},
 	build: {
+		target: "ESNext",
 		rollupOptions: {
 			input: "index.html",
 			output: {

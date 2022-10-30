@@ -1,12 +1,14 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "esnext",
+		"module": "ESNext",
 		"explainFiles": true,
 		"jsx": "preserve",
 		"moduleResolution": "node",
 		"jsxImportSource": "solid-js",
 		"strict": true,
-		"allowSyntheticDefaultImports": true
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true
 	}
 }

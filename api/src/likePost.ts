@@ -1,4 +1,4 @@
-import {doc, increment, updateDoc} from 'firebase/firestore';
+import {doc, increment, updateDoc} from "firebase/firestore";
 
 import type { Express } from "express"
 import type { Firestore } from "firebase/firestore";

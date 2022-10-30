@@ -1,4 +1,4 @@
-export type TimeString =
+declare type TimeString =
 `${ number }${
 	"hs" |
 	"ts" |
@@ -7,3 +7,5 @@ export type TimeString =
 	"h" |
 	"d"
 }`;
+
+export default TimeString;

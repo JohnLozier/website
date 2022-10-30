@@ -1,6 +1,6 @@
 import { TimeString } from "../types/utils";
 import { getMs } from "../lib/utils";
-import ratelimit from 'express-rate-limit';
+import ratelimit from "express-rate-limit";
 
 const RateLimit = (amount: number, time?: TimeString) =>
 	ratelimit({

@@ -1,4 +1,4 @@
-const isVisable = lazy(() => import("./transitions"));
+const isVisable = lazy(() => import("../lib/transitions"));
 
 import { createEffect, lazy } from "solid-js";
 

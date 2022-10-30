@@ -1,0 +1,32 @@
+[
+	{
+		"title": "CodeTyper",
+		"url": "https://johnlozier.com/codetyper/",
+		"tags": [
+			"SolidJS",
+			"Typescript",
+			"ChartJS",
+			"Tailwindcss",
+			"Javascript",
+			"NodeJS",
+			"Vite"
+		],
+		"authors": "John Lozier",
+		"description": "A minimalistic website to practice your typing speed while writing code. It functions by fetching a random file from github in the designed repo and language. The project includes a reactive graph, reactive wpm, settings and much more.",
+		"img": "images/codetyper.png"
+	},
+	{
+		"title": "Crypto Prices",
+		"tags": [
+			"React",
+			"Webpack",
+			"ChartJS",
+			"NodeJS",
+			"Javascript"
+		],
+		"authors": "John Lozier",
+		"url": "https://github.com/JohnLozier/cryptoPrices",
+		"description": "A symple extension that lets you easily check crypto prices. It features a 7-day price graph and search. It is available for [chromeium](https://chrome.google.com/webstore/detail/crypto-prices/aijcmfbomlkfaclgjpphidgoijibeobj) and [firefox](https://https://addons.mozilla.org/en-US/firefox/addon/cryptoprices/).",
+		"img": "images/codetyper.png"
+	}
+]

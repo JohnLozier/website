@@ -4,6 +4,9 @@ module.exports = {
 		"./src/**/*.tsx",
 		"./pages/**/*.tsx",
 	],
+	plugins: [
+		require("tailwindcss-animation-delay")
+	],
 	safelist: [
 		"delay-0",
 		"delay-250",
@@ -17,8 +20,8 @@ module.exports = {
 			},
 			colors: {
 				"background": "#2E3131",
-				"highlight": "#242929",
-				"dark": "#272C2C",
+				"highlight": "#1D2222",
+				"dark": "#212525",
 				"text": "#fff",
 				"subtitle": "#D9D9D9"
 			},
@@ -35,10 +38,12 @@ module.exports = {
 				"12xl": "8rem"
 			},
 			width: {
-				"6/5": "120%"
+				"6/5": "120%",
+				"135": "35rem"
 			},
 			height: {
-				"0.75": "0.25rem"
+				"0.75": "0.25rem",
+				"135": "35rem"
 			},
 			margin: {
 				"title": "min(14rem, 10%)",
@@ -58,6 +63,9 @@ module.exports = {
 			},
 			animation: {
 				"slide-down": "slide-down 0.5s ease-out forwards"
+			},
+			gridTemplateColumns: {
+				"lang": "repeat(auto-fit, minmax(6rem, 1fr))"
 			},
 			keyframes: {
 				"slide-down": {
