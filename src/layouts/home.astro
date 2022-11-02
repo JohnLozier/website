@@ -1,0 +1,13 @@
+---
+import Menu from "../components/menu/menu";
+import Title from "./title.astro";
+import Projects from "../layouts/projects.astro";
+import Cursor from "../components/cursor";
+---
+
+<Menu client:load />
+<Cursor client:load />
+<div class="bg-background w-screen min-h-screen">
+	<Title />
+	<Projects />
+</div>

@@ -1,8 +1,7 @@
 module.exports = {
 	content: [
-		"./index.html",
-		"./src/**/*.tsx",
-		"./pages/**/*.tsx",
+		"./src/**/*[.tsx, .jsx, .js, .ts, .astro]"
+
 	],
 	plugins: [
 		require("tailwindcss-animation-delay")
@@ -19,9 +18,9 @@ module.exports = {
 				"montserrat": ["Montserrat", "sans-serif"]
 			},
 			colors: {
-				"background": "#2E3131",
+				"background": "#1c1e1e",
 				"highlight": "#1D2222",
-				"dark": "#212525",
+				"dark": "#0f0f0f",
 				"text": "#fff",
 				"subtitle": "#D9D9D9"
 			},
@@ -62,18 +61,54 @@ module.exports = {
 				"250": "250ms"
 			},
 			animation: {
-				"slide-down": "slide-down 0.5s ease-out forwards"
+				"menu": "menu 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"name": "name 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"slide-down": "slide-down 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"blur": "blur 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards"
 			},
 			gridTemplateColumns: {
 				"lang": "repeat(auto-fit, minmax(6rem, 1fr))"
 			},
 			keyframes: {
+				"name": {
+					"0%": {
+						marginLeft: "-100vw"
+					},
+					"100%": {
+						marginLeft: "0"
+					}
+				},
+				"menu": {
+					"0%": {
+						top: "-3rem"
+					},
+					"100%": {
+						top: "0"
+					}
+				},
 				"slide-down": {
 					"0%": {
 						transform: "translateY(-100%)"
 					},
 					"100%": {
 						transform: "translateY(0)"
+					}
+				},
+				"blur": {
+					"0%": {
+						filter: "blur(8px)"
+					},
+					"100%": {
+						filter: "blur(0)"
+					}
+				},
+				"opacity": {
+					"0%": {
+						opacity: "0"
+					},
+					"100%": {
+						opacity: "1"
 					}
 				}
 			}

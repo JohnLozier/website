@@ -1,12 +1,11 @@
-const Dots = lazy(() => import("./dots"));
-
 import type { Accessor, Setter } from "solid-js";
 import { For, createEffect } from 'solid-js';
 
+import Dots from "./dots";
 import type ProjectList from "../../types/project";
-import { lazy } from "solid-js";
 
 const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter<number>, selected: Accessor<number>, projectList: Accessor<ProjectList> }) => {
+	
 	createEffect(() =>
 		props.projectList().default.length < props.selected() + 1 ? props.changeSelected(props.projectList().default.length - 1) : null
 	);
@@ -22,7 +21,7 @@ const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter
 					<a draggable={ false } href={ node.url } class="text-4xl hover:text-[2.35rem] select-none uppercase font-bold text-subtitle font-montserrat pointer cursor-none transition-[font] duration-500">{
 						node.title
 					}</a>
-					<img draggable={ false } src={ `../../../assets/${ node.img }` } class="my-4"/>
+					<img draggable={ false } src={ `/${ node.img }` } class="my-4"/>
 					<p class="text-text text-xl font-openSans font-bold description"> {
 						node.description.split(/(\[.*?\]\(.*?\))/g).map(node => {
 							const [matched, name, url] = node.match(/^\[(.*?)\]\((.*?)\)$/) || [];

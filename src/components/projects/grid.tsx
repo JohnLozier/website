@@ -4,33 +4,32 @@ import Card from "./card";
 import type ProjectList from "../../types/project";
 import isVisable from "../../lib/transitions";
 
-const projects = await import("../../../assets/jsons/projects.json");
+const projects = await import("../../jsons/projects.json");
 
-const Android = await import("../../../assets/svgs/languages/android.svg");
-const ChartJS = await import("../../../assets/svgs/languages/chartjs.svg");
-const Expo = await import("../../../assets/svgs/languages/expo.svg");
-const Csharp = await import("../../../assets/svgs/languages/csharp.svg");
-const Css = await import("../../../assets/svgs/languages/css.svg");
-const Electron = await import("../../../assets/svgs/languages/electron.svg");
-const Express = await import("../../../assets/svgs/languages/express.svg");
-const Firebase = await import("../../../assets/svgs/languages/firebase.svg");
-const Git = await import("../../../assets/svgs/languages/git.svg");
-const GraphQL = await import("../../../assets/svgs/languages/graphql.svg");
-const Html = await import("../../../assets/svgs/languages/html.svg");
-const Java = await import("../../../assets/svgs/languages/java.svg");
-const Javascript = await import("../../../assets/svgs/languages/javascript.svg");
-const Jest = await import("../../../assets/svgs/languages/jest.svg");
-const Linux = await import("../../../assets/svgs/languages/linux.svg");
-const NextJS = await import("../../../assets/svgs/languages/nextjs.svg");
-const NodeJS = await import("../../../assets/svgs/languages/nodejs.svg");
-const Python = await import("../../../assets/svgs/languages/python.svg");
-const React = await import("../../../assets/svgs/languages/react.svg");
-const SolidJS = await import("../../../assets/svgs/languages/solidjs.svg");
-const Tailwindcss = await import("../../../assets/svgs/languages/tailwindcss.svg");
-const Typescript = await import("../../../assets/svgs/languages/typescript.svg");
-const Vite = await import("../../../assets/svgs/languages/vite.svg");
-const Webpack = await import("../../../assets/svgs/languages/webpack.svg");
-
+const Android = await import("../../svgs/languages/android.svg");
+const ChartJS = await import("../../svgs/languages/chartjs.svg");
+const Expo = await import("../../svgs/languages/expo.svg");
+const Csharp = await import("../../svgs/languages/csharp.svg");
+const Css = await import("../../svgs/languages/css.svg");
+const Electron = await import("../../svgs/languages/electron.svg");
+const Express = await import("../../svgs/languages/express.svg");
+const Firebase = await import("../../svgs/languages/firebase.svg");
+const Git = await import("../../svgs/languages/git.svg");
+const GraphQL = await import("../../svgs/languages/graphql.svg");
+const Html = await import("../../svgs/languages/html.svg");
+const Java = await import("../../svgs/languages/java.svg");
+const Javascript = await import("../../svgs/languages/javascript.svg");
+const Jest = await import("../../svgs/languages/jest.svg");
+const Linux = await import("../../svgs/languages/linux.svg");
+const NextJS = await import("../../svgs/languages/nextjs.svg");
+const NodeJS = await import("../../svgs/languages/nodejs.svg");
+const Python = await import("../../svgs/languages/python.svg");
+const React = await import("../../svgs/languages/react.svg");
+const SolidJS = await import("../../svgs/languages/solidjs.svg");
+const Tailwindcss = await import("../../svgs/languages/tailwindcss.svg");
+const Typescript = await import("../../svgs/languages/typescript.svg");
+const Vite = await import("../../svgs/languages/vite.svg");
+const Webpack = await import("../../svgs/languages/webpack.svg");
 
 const Grid = (props: { changeFilter: Setter<ProjectList> }) => {
 	let grid: HTMLDivElement;

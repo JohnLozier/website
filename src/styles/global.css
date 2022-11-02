@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html, body, #root {
 	cursor: none;
 	width: 100vw;
@@ -12,11 +11,11 @@ html, body, #root {
 @font-face {
 	font-family: "open sans";
 	font-weight: 1 999; /* needed for chromium bug */
-	src: url("../assets/fonts/OpenSans.woff2") format("woff2");
+	src: url("/fonts/OpenSans.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "montserrat";
 	font-weight: 1 999; /* needed for chromium bug */
-	src: url("../assets/fonts/Montserrat.woff2") format("woff2");
+	src: url("/fonts/Montserrat.woff2") format("woff2");
 }

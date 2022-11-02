@@ -1,3 +1,5 @@
+// @ts-expect-error
+
 import { FiAlertTriangle, FiX } from "solid-icons/fi";
 
 import { wait } from "../lib/utils";
@@ -10,7 +12,7 @@ const Error = () => {
 			Sorry we were unable to find that page
 			<FiAlertTriangle class="inline ml-2 justify-self-start" size="2.3rem"/>
 		</h1>
-		<FiX class="text-red-100 justify-self-end w-9 h-9 pointer hover:text-red-200/80 hover:w-12 hover:h-12 hover:-ml-3 transition-[size, margin] duration-300" onClick={ () => {
+		<FiX class="!text-red-200/80 justify-self-end w-9 h-9 pointer hover:w-12 hover:h-12 hover:-ml-3 transition-[size, margin] duration-300" onClick={ () => {
 			Error.classList.add("-translate-y-full");
 			wait(() => Error.remove(), "0.5s");
 		} }/>
