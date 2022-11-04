@@ -1,7 +1,6 @@
 module.exports = {
 	content: [
 		"./src/**/*[.tsx, .jsx, .js, .ts, .astro]"
-
 	],
 	plugins: [
 		require("tailwindcss-animation-delay")
