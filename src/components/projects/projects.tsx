@@ -1,7 +1,8 @@
-import { createSignal, onMount } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 
 import Carousel from "./carousel";
 import Grid from "./grid";
+import isVisable from "../../lib/transitions";
 
 const projectList = await import("../../jsons/projects.json");
 
@@ -10,9 +11,10 @@ const Projects = () => {
 	let title: HTMLHeadingElement;
 
 	const [filtered, changeFiltered] = createSignal(projectList);
+	const shown = isVisable(() => title);
 
-	onMount(() => // will run when component is in view due to astro islands ✨
-		title.classList.remove("-translate-x-full")
+	createEffect(() =>
+		shown() ? title.classList.remove("-translate-x-full") : null
 	);
 	
 	return <>

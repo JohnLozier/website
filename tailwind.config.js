@@ -17,10 +17,13 @@ module.exports = {
 				"openSans": ["Open Sans", "sans-serif"],
 				"montserrat": ["Montserrat", "sans-serif"]
 			},
+			backgroundImage: {
+				"dotted": "radial-gradient(#ffffff1a 2px,transparent 0)"
+			},
 			colors: {
 				"background": "#1c1e1e",
 				"highlight": "#1D2222",
-				"dark": "#0f0f0f",
+				"dark": "#1c1b1b",
 				"text": "#fff",
 				"subtitle": "#D9D9D9"
 			},
