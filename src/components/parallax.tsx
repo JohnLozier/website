@@ -4,7 +4,7 @@ const Parallax = () => {
 
 	const [scroll, setScroll] = createSignal(0);
 
-	onMount( () =>
+	onMount(() =>
 		document.onscroll = () => 
 			setScroll(window.scrollY)
 	);

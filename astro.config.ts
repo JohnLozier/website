@@ -1,10 +1,14 @@
 import SolidJS from "@astrojs/solid-js";
 import { defineConfig } from "astro/config";
+import prefetch from "@astrojs/prefetch";
 import tailwind from "@astrojs/tailwind";
 
-export default defineConfig({
+const Config = defineConfig({
 	integrations: [
 		SolidJS(),
-		tailwind()
+		tailwind(),
+		prefetch()
 	]
 });
+
+export default Config;

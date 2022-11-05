@@ -22,7 +22,7 @@ module.exports = {
 			colors: {
 				"background": "#1c1e1e",
 				"highlight": "#1D2222",
-				"dark": "#1c1b1b",
+				"dark": "#161717",
 				"text": "#fff",
 				"subtitle": "#D9D9D9"
 			},
@@ -66,6 +66,7 @@ module.exports = {
 				"menu": "menu 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"name": "name 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"slide-down": "slide-down 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"slide-up": "slide-up 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"blur": "blur 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards"
 			},
@@ -95,6 +96,14 @@ module.exports = {
 					},
 					"100%": {
 						transform: "translateY(0)"
+					}
+				},
+				"slide-up": {
+					"0%": {
+						transform: "translateY(0)"
+					},
+					"100%": {
+						transform: "translateY(-100%)"
 					}
 				},
 				"blur": {

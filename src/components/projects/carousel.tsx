@@ -1,7 +1,7 @@
 import type { Accessor } from "solid-js";
 import Project from "./project";
 import type ProjectList from "../../types/project";
-import { createSignal } from "solid-js";
+import { createSignal } from 'solid-js';
 import { interval } from "../../lib/utils";
 import isVisable from "../../lib/transitions";
 

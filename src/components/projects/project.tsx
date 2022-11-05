@@ -7,7 +7,7 @@ import type ProjectList from "../../types/project";
 const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter<number>, selected: Accessor<number>, projectList: Accessor<ProjectList> }) => {
 	
 	createEffect(() =>
-		props.projectList().default.length < props.selected() + 1 ? props.changeSelected(props.projectList().default.length - 1) : null
+		props.projectList().default.length < props.selected() + 1 ? props.changeSelected(Math.max(0, props.projectList().default.length - 1)) : null
 	);
 
 	return <div class="bg-dark w-[34rem] h-135 overflow-hidden flex flex-col">
@@ -21,12 +21,12 @@ const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter
 					<a draggable={ false } href={ node.url } class="text-4xl hover:text-[2.35rem] select-none uppercase font-bold text-subtitle font-montserrat pointer cursor-none transition-[font] duration-500">{
 						node.title
 					}</a>
-					<img draggable={ false } src={ `/${ node.img }` } class="my-4"/>
+					<img draggable={ false } src={ `/${ node.img }` } class="my-4 w-full"/>
 					<p class="text-text text-xl font-openSans font-bold description"> {
 						node.description.split(/(\[.*?\]\(.*?\))/g).map(node => {
 							const [matched, name, url] = node.match(/^\[(.*?)\]\((.*?)\)$/) || [];
 							
-							return matched == node ? <a class="cursor-none pointer text-sky-400" href={ url }>{ name }</a> : node
+							return matched == node ? <a class="cursor-none pointer text-sky-400 hover:text-sky-600 transition-colors duration-500" href={ url }>{ name }</a> : node
 						})
 					}</p>
 				</div>
