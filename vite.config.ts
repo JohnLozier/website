@@ -1,33 +1,9 @@
 import SolidPlugin from "vite-plugin-solid";
 import { defineConfig } from "vite";
-import { readdirSync } from "fs";
 
 const Config = defineConfig({
 	plugins: [
-		SolidPlugin(),
-		{
-			name: "create-html",
-			generateBundle() {
-				readdirSync("pages").filter(page =>
-					page != "index.tsx"
-				).forEach(page =>
-					this.emitFile({
-						type: "asset",
-						fileName: `${ page.match(/^[^.]*/)?.[0] }.html`,
-						source: `<!DOCTYPE html>
-<html lang="en">
-<head>
-	<script type="module" crossorigin src="/src/js/index.js"></script>
-	<link rel="stylesheet" href="/src/css/index.css">
-</head>
-<body>
-	<div id="root"></div>
-</body>
-</html>`
-					})
-				);
-			}
-		}
+		SolidPlugin()
 	],
 	server: {
 		port: 3000
