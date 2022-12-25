@@ -1,5 +1,7 @@
-import type { Accessor } from "solid-js";
-import Project from "./project";
+const Project = lazy(() => import("./project"));
+
+import { Accessor, lazy } from "solid-js";
+
 import type ProjectList from "../../types/project";
 import { createSignal } from 'solid-js';
 import { interval } from "../../lib/utils";
@@ -25,7 +27,7 @@ const Carousel = (props: { projectList: Accessor<ProjectList> }) => {
 		return forward ? current + 1 : current - 1;
 	}), "10s");
 
-	return <div ref={ project! } class={ `${ shown() || project!?.classList.contains("opacity-100") ? "opacity-100 " : "" }bg-dark opacity-0 transition-opacity delay-500 duration-1000 px-4 h-fit rounded-2xl shadow-[0_25px_15px_-7px_#0000004d]` }> 
+	return <div ref={ project! } class={ `${ shown() || project!?.classList.contains("opacity-100") ? "opacity-100 " : "" }bg-dark mx-5 opacity-0 transition-opacity delay-500 duration-1000 px-4 h-fit rounded-2xl shadow-[0_25px_15px_-7px_#0000004d]` }> 
 		<Project selected={ selected } setLastChanged={ setLastChange } changeSelected={ changeSelected } projectList={ props.projectList } />
 	</div>
 };

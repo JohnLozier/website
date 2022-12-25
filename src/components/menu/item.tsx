@@ -1,21 +1,17 @@
-import { Accessor, createEffect } from "solid-js";
+import { A } from "@solidjs/router";
+import type { Accessor } from "solid-js";
 
-const Item = (props: { hidden: Accessor<Boolean>, name: string, link: string, delay: number }) => {
-	let link: HTMLAnchorElement;
+const Item = (props: { shown: Accessor<Boolean>, name: string, link: string, delay: number }) => {
+	let linkRef: HTMLHeadingElement;
 
-	createEffect(() =>
-		props.hidden() ? link.classList.add("-translate-x-full", "-ml-4") :
-		link.classList.remove("-translate-x-full", "-ml-4")
-	);
-
-	return <a ref={ link! } class={ `duration-1000 delay-${ props.delay } group pointer cursor-none p-2 -translate-x-full -ml-4 transition-[transform,margin] block w-fit` } href={ props.link }>
-		<h1 class="text-text select-none uppercase hover:text-3xl transition-[font-size] duration-700 !leading-8 font-monserrat text-2xl font-extrabold w-fit">
+	return <A class={ `duration-1000 delay-${ props.delay } group pointer cursor-none p-2 transition-[transform,margin] block w-fit${ props.shown() ? "" : " -translate-x-full -ml-4" }` } href={ props.link }>
+		<h1 ref={ linkRef! } class="text-text select-none uppercase font-monserrat text-xl font-bold w-fit">
 			{ props.name }
 		</h1>
 		<hr class="font-montserrat group-hover:text-4xl transition-size duration-700 ease-out border rounded-full" style={{
-			width: `${ props.name.length }ch`
+			width: `${ props.name.length * 0.7 }ch`
 		}}/>
-	</a>
+	</A>
 };
 
 export default Item;

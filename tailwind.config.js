@@ -3,7 +3,7 @@ module.exports = {
 		"./src/**/*[.tsx, .jsx, .js, .ts, .astro]"
 	],
 	plugins: [
-		require("tailwindcss-animation-delay")
+		require("tailwindcss-animation")
 	],
 	safelist: [
 		"delay-0",
@@ -16,20 +16,25 @@ module.exports = {
 				"openSans": ["Open Sans", "sans-serif"],
 				"montserrat": ["Montserrat", "sans-serif"]
 			},
+			screens: {
+				"xsm": "440px"
+			},
 			backgroundImage: {
 				"dotted": "radial-gradient(#ffffff1a 2px,transparent 0)"
 			},
 			colors: {
 				"background": "#1c1e1e",
-				"highlight": "#1D2222",
+				"highlight": "#121313",
 				"dark": "#161717",
 				"text": "#fff",
-				"subtitle": "#D9D9D9"
+				"subtitle": "#e3e3e3"
 			},
 			dropShadow: {
 				"title": "0 0 10px #00A3FF",
 				"titleHover": "0 0 15px #00A3FF",
-				"welcome": "0 0 5px rgba(255, 255, 255, 0.3)"
+				"welcome": "0 0 5px rgba(255, 255, 255, 0.3)",
+				"blog": "0 0 10px #4497F9",
+				"blogHover": "0 0 15px #6781F9",
 			},
 			transitionProperty: {
 				"filter": "filter",
@@ -61,14 +66,18 @@ module.exports = {
 			},
 			transitionDelay: {
 				"250": "250ms"
-			},
+			}, 
 			animation: {
 				"menu": "menu 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"name": "name 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-				"slide-down": "slide-down 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-				"slide-up": "slide-up 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"post": "post 2s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"blur": "blur 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards"
+				"loading": "loading 1.5s linear forwards",
+				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"line": "line 2s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"blog": "blog 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"card": "card 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"sub-title": "sub-title 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 			},
 			gridTemplateColumns: {
 				"lang": "repeat(auto-fit, minmax(6rem, 1fr))"
@@ -76,10 +85,12 @@ module.exports = {
 			keyframes: {
 				"name": {
 					"0%": {
-						marginLeft: "-100vw"
+						right: "30rem",
+						opacity: "0"
 					},
 					"100%": {
-						marginLeft: "0"
+						right: "0",
+						opacity: "1"
 					}
 				},
 				"menu": {
@@ -90,35 +101,84 @@ module.exports = {
 						top: "0"
 					}
 				},
-				"slide-down": {
+				"card": {
 					"0%": {
-						transform: "translateY(-100%)"
+						left: "5rem",
+						opacity: "0"
+					},
+					"50%": {
+						left: "0",
 					},
 					"100%": {
-						transform: "translateY(0)"
+						opacity: "1",
+						left: "0"
 					}
 				},
-				"slide-up": {
+				"post": {
 					"0%": {
-						transform: "translateY(0)"
+						right: "20rem",
+						opacity: "0"
 					},
 					"100%": {
-						transform: "translateY(-100%)"
+						right: "0",
+						opacity: "1"
 					}
 				},
 				"blur": {
 					"0%": {
-						filter: "blur(8px)"
+						filter: "blur(8px)",
+						opacity: "0"
 					},
 					"100%": {
-						filter: "blur(0)"
+						filter: "blur(0)",
+						opacity: "1"
 					}
 				},
-				"opacity": {
+				opacity: {
 					"0%": {
 						opacity: "0"
 					},
 					"100%": {
+						opacity: "1"
+					}
+				},
+				"loading": {
+					"0%": {
+						opacity: "0",
+						width: "50%",
+						height: "50%"
+					},
+					"100%": {
+						opacity: "1",
+						width: "100%",
+						height: "100%"
+					}
+				},
+				"line": {
+					"0%": {
+						width: "0"
+					},
+					"100%": {
+						width: "calc(100% + 2.5rem)"
+					}
+				},
+				"blog": {
+					"0%": {
+						transform: "translateY(-5rem) scale(0.8)",
+						opacity: "0"
+					},
+					"100%": {
+						transform: "translateY(0) scale(1)",
+						opacity: "1"
+					}
+				},
+				"sub-title": {
+					"0%": {
+						right: "15rem",
+						opacity: "0"
+					},
+					"100%": {
+						right: "0",
 						opacity: "1"
 					}
 				}

@@ -1,52 +1,39 @@
-import { createEffect, createSignal } from "solid-js";
+const Item = lazy(() => import("./item"));
 
-import Item from "./item";
-import { sameLine } from "../../lib/utils";
+import { createSignal, lazy } from "solid-js";
 
-const Menu = () => {
+import { useNavigate } from "@solidjs/router";
 
-	let background: HTMLDivElement;
-	let menu: HTMLDivElement;
+const [remove, setRemove] = createSignal(false);
 
-	const [hidden, setHidden] = createSignal(true);
+const Menu = (props: { removed?: true }) => {
+	const [shown, setShown] = createSignal(false);
 
-	createEffect(() => {
-		
-		background.classList.remove("hidden"); // Prevent animation from playing on page load
-
-		hidden() ? sameLine(
-			() => menu.children[0].children[0].classList.remove("rotate-35", "translate-y-exit"),
-			() => menu.children[0].children[1].classList.replace("left-0", "left-1"),
-			() => menu.children[0].children[1].classList.remove("opacity-0"),
-			() => menu.children[0].children[2].classList.remove("-rotate-35", "-translate-y-exit"),
-			() => background.classList.add("pointer-events-none"),
-			() => background.classList.replace("opacity-60", "opacity-0")
-		) : sameLine(
-			() => menu.children[0].children[0].classList.add("rotate-35", "translate-y-exit"),
-			() => menu.children[0].children[1].classList.replace("left-1", "left-0"),
-			() => menu.children[0].children[1].classList.add("opacity-0"),
-			() => menu.children[0].children[2].classList.add("-rotate-35", "-translate-y-exit"),
-			() => background.classList.remove("pointer-events-none"),
-			() => background.classList.replace("opacity-0", "opacity-60")
-		);
-	});
+	const navigate = useNavigate();
 	
+	setRemove(false)
+
 	return <>
-		<div ref={ menu! } class="group w-12 h-12 fixed top-0 left-0 flex items-center justify-center pointer z-[2]" onClick={ () => setHidden(current => !current) }>
+		<div class={ `group w-12 h-12 fixed top-0 left-0 flex items-center justify-center duration-1000 pointer z-[2] ${ !shown() || props.removed ? "mix-blend-difference" : "" }` } onClick={ () => !props.removed ? setShown(current => !current) : navigate("/") }>
 			<div class="flex flex-col gap-1.5 group">
-				<div class="transition-[rotate, transform] relative -top-12 animate-menu animation-delay-400 duration-1000 bg-white w-8 h-0.75" />
-				<div class="transition-[opacity, left] relative left-1 -top-12 animate-menu animation-delay-200 duration-1000 bg-white w-8 h-0.75" />
-				<div class="transition-[rotate, transform] relative -top-12 animate-menu duration-1000 bg-white w-8 h-0.75" />
+				<div class={ `${ shown() || remove() || props.removed ? "rotate-35 translate-y-exit group-hover:rotate-[25deg] " : "" }transition-[rotate,transform] relative ${ props.removed ? "animate-none" : "animate-menu -top-12" } animation-delay-400 duration-1000 bg-white w-8 h-0.75` } />
+				<div class={ `${ shown() || remove() || props.removed ? "opacity-0 left-0" : "left-1" } transition-[opacity,left,transform] relative ${ props.removed ? "animate-none" : "animate-menu -top-12" } animation-delay-200 duration-1000 bg-white w-8 h-0.75` } />
+				<div class={ `${ shown() || remove() || props.removed ? "-rotate-35 -translate-y-exit group-hover:-rotate-[25deg] " : "" }transition-[rotate,transform] relative ${ props.removed ? "animate-none" : "animate-menu -top-12" } duration-1000 bg-white w-8 h-0.75` } />
 			</div>
 		</div>
-		<div ref={ background! } class="w-screen h-screen opacity-0 hidden pointer-events-none bg-black z-[1] fixed transition-opacity duration-1000" onClick={ () => setHidden(true) }>
-			<div class="top-10 left-4 relative w-fit">
-				<Item hidden={ hidden } name="Homepage" link="/" delay={ 0 }/>
-				<Item hidden={ hidden } name="Blog" link="/blog" delay={ 250 }/>
-				<Item hidden={ hidden } name="Github" link="https://github.com/JohnLozier" delay={ 500 }/>
-			</div>
+		<div class={ `${ shown() ? "opacity-60 " : "opacity-0 pointer-events-none " }w-screen h-screen bg-black z-[1] fixed top-0 transition-opacity duration-1000` } onClick={ () => setShown(false) } />
+		<div class="top-10 left-4 z-[1] fixed w-fit" onClick={ () => setShown(false) }>
+			<Item shown={ shown } name="Homepage" link="/" delay={ 0 }/>
+			<Item shown={ shown } name="Blog" link="/blog" delay={ 250 }/>
+			<Item shown={ shown } name="Github" link="https://github.com/JohnLozier" delay={ 500 }/>
 		</div>
 	</>
 };
 
 export default Menu;
+
+const RemoveMenu = () => {
+	setRemove(true)
+};
+
+export { RemoveMenu };

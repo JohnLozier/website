@@ -6,6 +6,6 @@ declare type TimeString =
 	"m" |
 	"h" |
 	"d"
-}`;
+}` | string;
 
 export default TimeString;

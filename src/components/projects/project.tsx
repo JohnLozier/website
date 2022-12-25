@@ -1,7 +1,8 @@
-import type { Accessor, Setter } from "solid-js";
+const Dots = lazy(() => import("./dots"));
+
+import { Accessor, Setter, lazy } from "solid-js";
 import { For, createEffect } from 'solid-js';
 
-import Dots from "./dots";
 import type ProjectList from "../../types/project";
 
 const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter<number>, selected: Accessor<number>, projectList: Accessor<ProjectList> }) => {
@@ -10,7 +11,7 @@ const Project = (props: { changeSelected: Setter<number>, setLastChanged: Setter
 		props.projectList().default.length < props.selected() + 1 ? props.changeSelected(Math.max(0, props.projectList().default.length - 1)) : null
 	);
 
-	return <div class="bg-dark w-[34rem] h-135 overflow-hidden flex flex-col">
+	return <div class="bg-dark max-w-[34rem] h-135 overflow-hidden flex flex-col">
 		<div class="flex transition-left relative transition-[left] duration-1000" style={ {
 			width: `${ props.projectList().default.length * 100 }%`,
 			left: `-${ props.selected() * 100 }%`

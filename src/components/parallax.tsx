@@ -1,18 +1,14 @@
-import { createSignal, onMount } from 'solid-js';
+import { onMount } from 'solid-js';
 
 const Parallax = () => {
-
-	const [scroll, setScroll] = createSignal(0);
+	let background: HTMLDivElement;
 
 	onMount(() =>
 		document.onscroll = () => 
-			setScroll(window.scrollY)
+			background.style.setProperty("--bg-offset", `-${ Math.round(window.scrollY / 2) }px`)
 	);
 
-	return <div class="bg-dotted bg-[length:2rem_2rem] fixed top-0 w-screen h-screen pointer-events-none bg-background -z-[1]" style={ {
-		"background-position-y": `${ Math.round(-scroll()) / 2 }px`,
-	} }>
-	</div>
+	return <div ref={ background! } class="before:bg-dotted before:bg-[length:2rem_2rem] w-screen h-screen fixed before:h-[250%] before:w-[250%] before:-top-3/4 before:absolute before:rotate-45 before:-left-3/4 before:block top-0 pointer-events-none before:bg-[position:var(--bg-offset)_var(--bg-offset)] bg-background -z-[1]"/>
 };
 
 export default Parallax;
