@@ -5,7 +5,9 @@ import FourOFour from "./pages/404";
 import Index from "./pages/index";
 import Post from "./pages/post";
 
-const Posts = import.meta.glob("./assets/posts/*.md");
+const Posts = import.meta.glob("./assets/posts/*.md", {
+	as: "raw"
+});
 
 const Router = () => {
 	return <Routes>
