@@ -27,7 +27,7 @@
 			"Git"
 		],
 		"url": "https://github.com/JohnLozier/cryptoPrices",
-		"description": "A symple extension that lets you easily check crypto prices. It features a 7-day price graph and search. It is available for [chromeium](https://chrome.google.com/webstore/detail/crypto-prices/aijcmfbomlkfaclgjpphidgoijibeobj) and [firefox](https://https://addons.mozilla.org/en-US/firefox/addon/cryptoprices/).",
+		"description": "A simple extension that lets you easily check crypto prices. It features a 7-day price graph and search. It is available for [chromeium](https://chrome.google.com/webstore/detail/crypto-prices/aijcmfbomlkfaclgjpphidgoijibeobj) and [firefox](https://https://addons.mozilla.org/en-US/firefox/addon/cryptoprices/).",
 		"img": "images/crypto.png"
 	},
 	{

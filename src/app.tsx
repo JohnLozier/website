@@ -1,6 +1,7 @@
 import "./styles/global.css";
 
 import Cursor from "./components/cursor";
+import EasterEggs from "./lib/eastereggs";
 import { MetaProvider } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import Routes from "./router";
@@ -13,6 +14,8 @@ const App = () => {
 	dayjs.extend(relativeTime);
 
 	window.scrollTo(0, 0); // reset scroll to top
+
+	EasterEggs();
 
 	return <Router>
 		<MetaProvider>

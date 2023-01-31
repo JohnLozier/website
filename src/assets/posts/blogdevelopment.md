@@ -10,9 +10,9 @@ date: 2022-4-9
 
 ## First Experience
 
-This post discusses my first blog (not this one), which was coded in nextjs and react.
+This post discusses my first blog (not this one), which was coded in NextJS and React.
 
-This was my first time working with NextJS, and also my first time working with React other than a small part of the Canvas+ popup. It has been a great experience. Inline js, components, and hooks make the code a lot cleaner and easier to work with. However, there are a few issues I have run into annoyances with React. A slightly annoying thing with React is that it is run before page load, which means doing things such as accessing an element or the window will result in an `undefined` error. You can fix this by using `useEffect()`
+This was my first time working with NextJS, and also my first time working with React other than a small part of the Canvas+ popup. It has been a great experience. Inline js, components, and hooks make the code a lot cleaner and easier to work with. However, there are a few issues I have run into with React. A slightly annoying thing with React is that it is run before page load, which means doing things such as accessing an element or the window will result in an `undefined` error. You can fix this by using `useEffect()`
 ```jsx
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ But as you can see this results in semi messy code, and can end up being quite a
 
 - ### Document progress
 
-	One thing I heavily regret is not documenting my progress while working on each page (especially if you are writing a post on it). Along with code comments. Documenting progress, such as commenting code instead of deleting it can save you a lot of time when you need to revert to a previous state. Comments are useful by reminding you what a specific function is doing especially if you haven't worked with the code in a while. Along with increasing the readability for others.
+	One thing I heavily regret is not documenting my progress while working on each page (especially if you are writing a post on it), along with code comments. Documenting progress, such as commenting code instead of deleting it can save you a lot of time when you need to revert to a previous state. Comments are useful by reminding you what a specific function is doing especially if you haven't worked with the code in a while. Along with increasing the readability for others.
 
 ## Conclusion 
 

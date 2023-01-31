@@ -9,11 +9,13 @@ specifiers:
   '@solidjs/router': ^0.5.0
   '@testing-library/jest-dom': ^5.16.5
   '@types/bad-words': ^3.0.1
+  '@types/crypto-js': ^4.1.1
   '@types/jest': ^29.2.2
   '@types/markdown-it': ^12.2.3
   '@types/node': ^18.11.9
   autoprefixer: ^10.4.13
   bad-words: ^3.0.4
+  crypto-js: ^4.1.1
   cssnano: ^5.1.14
   dayjs: ^1.11.6
   devicons: ^1.8.0
@@ -41,6 +43,7 @@ dependencies:
   '@solidjs/meta': 0.28.2_solid-js@1.6.1
   '@solidjs/router': 0.5.0_solid-js@1.6.1
   bad-words: 3.0.4
+  crypto-js: 4.1.1
   dayjs: 1.11.6
   devicons: 1.8.0
   front-matter: 4.0.2
@@ -56,6 +59,7 @@ devDependencies:
   '@babel/core': 7.20.2
   '@testing-library/jest-dom': 5.16.5
   '@types/bad-words': 3.0.1
+  '@types/crypto-js': 4.1.1
   '@types/jest': 29.2.2
   '@types/markdown-it': 12.2.3
   '@types/node': 18.11.9
@@ -974,6 +978,10 @@ packages:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
 
+  /@types/crypto-js/4.1.1:
+    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
+    dev: true
+
   /@types/istanbul-lib-coverage/2.0.4:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
@@ -1673,6 +1681,10 @@ packages:
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /crypto-random-string/2.0.0:
     resolution: {integrity: sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==}
