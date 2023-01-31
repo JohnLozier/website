@@ -8,7 +8,18 @@ module.exports = {
 	safelist: [
 		"delay-0",
 		"delay-250",
-		"delay-500"
+		"delay-500",
+		"animate-pulse",
+		"animation-delay-100",
+		"animation-delay-200",
+		"animation-delay-300",
+		"animation-delay-400",
+		"animation-delay-500",
+		"animation-delay-600",
+		"animation-delay-700",
+		"animation-delay-800",
+		"animation-delay-900",
+		"animation-delay-1000",
 	],
 	theme: {
 		extend: {
@@ -75,15 +86,17 @@ module.exports = {
 				"loading": "loading 1.5s linear forwards",
 				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"line": "line 2s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-				"blog": "blog 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"appear": "appear 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"card": "card 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"sub-title": "sub-title 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"slide-down": "slide-down 1s cubic-bezier(0.4, 0, 0.2, 1) forwards"
 			},
 			gridTemplateColumns: {
-				"lang": "repeat(auto-fit, minmax(6rem, 1fr))"
+				"lang": "repeat(auto-fit, minmax(6rem, 1fr))",
+				"smallLang": "repeat(auto-fit, minmax(4.5rem, 1fr))"
 			},
 			keyframes: {
-				"name": {
+				name: {
 					"0%": {
 						right: "30rem",
 						opacity: "0"
@@ -93,7 +106,7 @@ module.exports = {
 						opacity: "1"
 					}
 				},
-				"menu": {
+				menu: {
 					"0%": {
 						top: "-3rem"
 					},
@@ -101,7 +114,7 @@ module.exports = {
 						top: "0"
 					}
 				},
-				"card": {
+				card: {
 					"0%": {
 						left: "5rem",
 						opacity: "0"
@@ -114,7 +127,7 @@ module.exports = {
 						left: "0"
 					}
 				},
-				"post": {
+				post: {
 					"0%": {
 						right: "20rem",
 						opacity: "0"
@@ -124,7 +137,7 @@ module.exports = {
 						opacity: "1"
 					}
 				},
-				"blur": {
+				blur: {
 					"0%": {
 						filter: "blur(8px)",
 						opacity: "0"
@@ -142,7 +155,7 @@ module.exports = {
 						opacity: "1"
 					}
 				},
-				"loading": {
+				loading: {
 					"0%": {
 						opacity: "0",
 						width: "50%",
@@ -154,7 +167,7 @@ module.exports = {
 						height: "100%"
 					}
 				},
-				"line": {
+				line: {
 					"0%": {
 						width: "0"
 					},
@@ -162,7 +175,7 @@ module.exports = {
 						width: "calc(100% + 2.5rem)"
 					}
 				},
-				"blog": {
+				appear: {
 					"0%": {
 						transform: "translateY(-5rem) scale(0.8)",
 						opacity: "0"
@@ -180,6 +193,12 @@ module.exports = {
 					"100%": {
 						right: "0",
 						opacity: "1"
+					}
+				},
+				"slide-down": {
+					"0%": {},
+					"100%": {
+						transform: "translateY(0)"
 					}
 				}
 			}

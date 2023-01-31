@@ -1,10 +1,10 @@
-import FourOFour from "../../pages/404";
-import Index from "../../pages/index";
+import { expect, test } from "vitest";
 
-test("Renders index correctly", () =>
-	expect(Index()).toBeTruthy()
-);
+const Pages = import.meta.glob("../pages/*")
 
-test("Renders 404 correctly", () =>
-	expect(FourOFour()).toBeTruthy()
+// test each page
+Object.values(Pages).forEach((page, index) =>
+	test(`Renders ${ Object.keys(Pages)[index].match(/(?<=\/)[^/]*(?=\.)/)![0] } Correctly`, async () =>
+		expect(await page()).toBeTruthy()
+	)
 );

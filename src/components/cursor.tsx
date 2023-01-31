@@ -50,7 +50,7 @@ const Cursor = () => {
 			);
 	});
 
-	return <div ref={ cursor! } class="w-8 h-8 pointer-events-none fixed bg-black invert mix-blend-difference z-10 rounded-full transition-size ease-in-out duration-200 hidden" />
+	return <div ref={ cursor! } class="w-8 h-8 md:visible invisible pointer-events-none fixed bg-black invert mix-blend-difference z-10 rounded-full transition-size ease-in-out duration-200 hidden" />
 };
 
 export default Cursor;

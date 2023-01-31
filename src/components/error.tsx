@@ -4,6 +4,7 @@ import { onMount } from "solid-js";
 import { wait } from "../lib/utils";
 
 const Error = () => {
+	
 	let Error: HTMLDivElement;
 
 	onMount(() =>

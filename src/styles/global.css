@@ -3,9 +3,22 @@
 @tailwind utilities;
 
 html, body, #root {
-	cursor: none;
+	cursor: default;
 	width: 100vw;
 	overflow-x: hidden;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    html, body, #root, .pointer {
+        cursor: none
+    }
+	html, body, #root {
+		overflow: var(--fancy-scroll);
+	}
 }
 
 @font-face {

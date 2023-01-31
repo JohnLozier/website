@@ -5,6 +5,7 @@ import { useNavigate } from "@solidjs/router";
 
 const [ shown, setShown ] = createSignal<string | Boolean>(false);
 
+// loading effect inspired by https://adriancasares.com
 const Loading = () => {
 
 	const navigate = useNavigate();

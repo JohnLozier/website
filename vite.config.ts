@@ -1,9 +1,11 @@
 import SolidJS from "vite-plugin-solid";
-import { defineConfig } from "vite";
+import SolidSVG from "vite-plugin-solid-svg";
+import { defineConfig } from "vitest/config";
 
 const Config = defineConfig({
 	plugins: [
-		SolidJS()
+		SolidJS(),
+		SolidSVG()
 	],
 	server: {
 		port: 3000
@@ -25,7 +27,20 @@ const Config = defineConfig({
 			},
 			
 		}
-	}
+	},
+	test: {
+		deps: {
+			registerNodeLoader: true,
+			inline: [/solid-js/],
+		},
+		environment: "jsdom",
+		globals: true,
+		setupFiles: [ "node_modules/@testing-library/jest-dom/extend-expect" ],
+		transformMode: { web: [/\.[jt]sx?$/] },
+	},
+	resolve: {
+		conditions: ["development", "browser"],
+	},
 });
 
 export default Config;

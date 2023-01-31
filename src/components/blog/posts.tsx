@@ -1,13 +1,14 @@
+import type Post from "../../types/posts";
+import dayJS from "dayjs";
+import { lazy } from "solid-js";
+import matter from "front-matter";
+
 const Item = lazy(() => import("./item"));
 const files = import.meta.glob("../../assets/posts/*.md", {
 	eager: true,
 	as: "raw"
 });
 
-import type Post from "../../types/posts";
-import dayJS from "dayjs";
-import { lazy } from "solid-js";
-import matter from "front-matter";
 
 const Posts = (props: { delay?: boolean }) => {
 	return <div class="flex flex-col items-center mb-40 gap-12">

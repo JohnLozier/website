@@ -2,6 +2,7 @@ import Comments from "../components/post/comments/comments";
 import Content from "../components/post/content";
 import Markdown from "../types/posts";
 import Menu from "../components/menu/menu";
+import StaggeredScroll from "../lib/scroll";
 import { Title } from "@solidjs/meta";
 import { createResource } from 'solid-js';
 import matter from "front-matter";
@@ -14,6 +15,8 @@ const Post = () => {
 
 		return matter<Markdown>(res.default);
 	});
+
+	StaggeredScroll("custom", 300);
 
 	return <>
 		<Menu removed={ true } />

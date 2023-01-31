@@ -1,6 +1,11 @@
 import TimeString from "../types/utils";
+import { createSignal } from "solid-js";
 
 export const getMs = (time: TimeString) => {
+
+	if (typeof time == "number")
+		return time;
+
 	const [number, type] = time.match(/[.\d]+|(\w+)/g)!;
 	
 	return parseFloat(number) * (
@@ -25,4 +30,12 @@ export const interval = (func: Function, time: TimeString) =>
 
 export const sameLine = (...func: Function[]) => {
 	func.forEach(node => node());
+};
+
+export const WaitUntil = (ms: TimeString) => {
+	const [ finished, setFinished ] = createSignal(false);
+
+	setTimeout(() => setFinished(true), getMs(ms));
+
+	return [finished];
 };

@@ -2,8 +2,7 @@ interface Project {
 	default: {
         title: string;
         tags: string[];
-        url: string;
-        authors: string;
+        url?: string;
         description: string;
         img: string;
     }[];

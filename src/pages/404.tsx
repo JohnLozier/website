@@ -6,7 +6,7 @@ const FourOFour = () => {
 	return <>
 		<Home />
 		<Error />
-		<Title>404</Title>
+		<Title>404 - John Lozier</Title>
 	</>
 };
 

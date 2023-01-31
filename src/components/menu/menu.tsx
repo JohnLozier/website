@@ -1,8 +1,8 @@
-const Item = lazy(() => import("./item"));
-
 import { createSignal, lazy } from "solid-js";
 
 import { useNavigate } from "@solidjs/router";
+
+const Item = lazy(() => import("./item"));
 
 const [remove, setRemove] = createSignal(false);
 

@@ -9,9 +9,10 @@
 			"Tailwindcss",
 			"Javascript",
 			"NodeJS",
-			"Vite"
+			"Vite",
+			"Git",
+			"Vercel"
 		],
-		"authors": "John Lozier",
 		"description": "A minimalistic website to practice your typing speed while writing code. It functions by fetching a random file from github in the designed repo and language. The project includes a reactive graph, reactive wpm, settings and much more.",
 		"img": "images/codetyper.png"
 	},
@@ -22,11 +23,109 @@
 			"Webpack",
 			"ChartJS",
 			"NodeJS",
-			"Javascript"
+			"Javascript",
+			"Git"
 		],
-		"authors": "John Lozier",
 		"url": "https://github.com/JohnLozier/cryptoPrices",
 		"description": "A symple extension that lets you easily check crypto prices. It features a 7-day price graph and search. It is available for [chromeium](https://chrome.google.com/webstore/detail/crypto-prices/aijcmfbomlkfaclgjpphidgoijibeobj) and [firefox](https://https://addons.mozilla.org/en-US/firefox/addon/cryptoprices/).",
-		"img": "images/codetyper.png"
+		"img": "images/crypto.png"
+	},
+	{
+		"title": "Canvas+",
+		"tags": [
+			"React",
+			"Javascript",
+			"Html",
+			"Css",
+			"NodeJS",
+			"Git",
+			"GraphQL",
+			"Webpack"
+		],
+		"url": "https://github.com/canvasplus/extension",
+		"description": "A free Browser extension that improves the experience of students using Canvas. Everything you could need, from color themes, to navigation shortcuts, to improved performance.",
+		"img": "images/canvasplus.png"
+	},
+	{
+		"title": "Android & Expo",
+		"tags": [
+			"Android",
+			"Expo",
+			"Java",
+			"NodeJS"
+		],
+		"description": "I have some experience with Android, Java and Expo from making android apps for school projects.",
+		"img": "images/android.png"
+	},
+	{
+		"title": "Blog",
+		"tags": [
+			"Javascript",
+			"Typescript",
+			"SolidJS",
+			"Astro",
+			"Express",
+			"Tailwindcss",
+			"Jest",
+			"Pocketbase",
+			"Firebase",
+			"Vite",
+			"Git",
+			"NodeJS",
+			"Vercel"
+		],
+		"url": "https://github.com/JohnLozier/website",
+		"description": "The website that you are viewing right now. It showcases my projects and is used to document my work. It was originally made with astro, express and firebase, until I decided on solidJS and pocketbase.",
+		"img": "images/website.png"
+	},
+	{
+		"title": "Old Blog",
+		"tags": [
+			"Javascript",
+			"NodeJS",
+			"NextJS",
+			"NodeJS",
+			"Vercel",
+			"Webpack",
+			"Git"
+		],
+		"url": "https://github.com/JohnLozier/website/tree/49c28cc5c51d6a27fd1ce2e894c68bf05e17fe0c",
+		"description": "My old blog was a simple NextJS website hosted on github pages, it was my first time using react and NextJS and I learned a lot from it.",
+		"img": "images/oldwebsite.png"
+	},
+	{
+		"title": "Python",
+		"tags": [
+			"Python"
+		],
+		"description": "I have worked with python in the past for school projects and some personal projects when I had just begun coding. I mainly made simple text games and art with python turtle.",
+		"img": "images/python.png"
+	},
+	{
+		"title": "Encryptor",
+		"tags": [
+			"Electron",
+			"Javascript",
+			"React",
+			"Webpack"
+		],
+		"description": "Encryptor is a small electron app that I made to encrypt and decrypt files. It uses AES-256 encryption and hashing with sha-256. I probably won't be releasing it, because while it works well it isn't up to my standerds in terms of design and features.",
+		"img": "images/encryptor.png"
+	},
+	{
+		"title": "C Sharp",
+		"tags": [
+			"Csharp"
+		],
+		"description": "I know very basic C# from messing around with it to make simple guis and manipulating the cursor. I may mess around with it more in the future.",
+		"img": "images/csharp.png"
+	},
+	{
+		"title": "Cyberpatriots",
+		"tags": [
+			"Linux"
+		],
+		"description": "I mainly work on the ubuntu image for my cyberpatriots team, but also help with forensics on the windows images. I have made some private scripts to search for unwanted files in bash and powershell.",
+		"img": "images/cyberpatriots.png"
 	}
 ]
