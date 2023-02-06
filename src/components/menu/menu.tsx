@@ -10,7 +10,7 @@ const Menu = (props: { removed?: true }) => {
 	const [shown, setShown] = createSignal(false);
 
 	const navigate = useNavigate();
-	
+
 	setRemove(false)
 
 	return <>

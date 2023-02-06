@@ -1,10 +1,10 @@
-import { onMount } from 'solid-js';
+import { onMount } from "solid-js";
 
 const Parallax = () => {
 	let background: HTMLDivElement;
 
 	onMount(() =>
-		document.onscroll = () => 
+		document.onscroll = () =>
 			background.style.setProperty("--bg-offset", `-${ Math.round(window.scrollY / 2) }px`)
 	);
 

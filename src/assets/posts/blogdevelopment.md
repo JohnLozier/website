@@ -2,7 +2,7 @@
 
 title: Blog Development
 preview: This blog post discusses the process and things I learned when making a website in React with NextJS.
-image: /svgs/languages/solidjs.svg
+image: /images/oldwebsite.png
 date: 2022-4-9
 
 ---

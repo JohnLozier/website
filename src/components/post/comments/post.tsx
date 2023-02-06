@@ -1,5 +1,5 @@
 import Comment from "../../../../api/comment";
-import DayJS from "dayjs";
+import DayJS from "dayjs"
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { useLocation } from "@solidjs/router";
 
@@ -11,7 +11,6 @@ const Post = () => {
 	let content: HTMLTextAreaElement;
 
 	const post = useLocation().pathname.match(/[^/]*$/)![0]
-	
 
 	return <div class="mb-6 max-w-[40rem] w-full flex animate-appear flex-col">
 		<div class="flex">

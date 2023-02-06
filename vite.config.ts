@@ -25,7 +25,6 @@ const Config = defineConfig({
 					asset.name?.endsWith(".ttf") ? "assets/fonts/[name].[ext]" :
 					"assets/[name].[ext]",
 			},
-			
 		}
 	},
 	test: {

@@ -1,4 +1,4 @@
-import { Accessor, Setter, createEffect } from 'solid-js';
+import { Accessor, Setter, createEffect } from "solid-js";
 
 import { sameLine } from "../../lib/utils";
 

@@ -11,7 +11,7 @@ const Loading = () => {
 	const navigate = useNavigate();
 
 	setShown(false); // reset on page change
-	
+
 	createEffect(() => {
 		shown() ? sameLine(
 			() => document.documentElement.style.overflowY = "hidden",

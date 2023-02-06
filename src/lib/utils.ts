@@ -7,7 +7,7 @@ export const getMs = (time: TimeString) => {
 		return time;
 
 	const [number, type] = time.match(/[.\d]+|(\w+)/g)!;
-	
+
 	return parseFloat(number) * (
 		type == "hs" ? 10 :
 		type == "ts" ? 100 :

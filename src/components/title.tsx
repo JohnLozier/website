@@ -1,7 +1,7 @@
 import { addElement } from "../lib/scroll";
 
 const Title = () => {
-	
+
 	let titleRef: HTMLDivElement;
 
 	addElement(() => titleRef, 0);
@@ -21,6 +21,6 @@ const Title = () => {
 			</h3>
 		</div>
 	</div>
-}; 
+};
 
 export default Title;

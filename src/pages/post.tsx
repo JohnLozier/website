@@ -4,7 +4,7 @@ import Markdown from "../types/posts";
 import Menu from "../components/menu/menu";
 import StaggeredScroll from "../lib/scroll";
 import { Title } from "@solidjs/meta";
-import { createResource } from 'solid-js';
+import { createResource } from "solid-js";
 import matter from "front-matter";
 import { useLocation } from "@solidjs/router";
 

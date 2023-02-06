@@ -6,7 +6,7 @@ import isVisable from "../../lib/transitions";
 const Posts = lazy(() => import("./posts"));
 
 const Blog = () => {
-	
+
 	let title: HTMLHeadingElement;
 	let titleRef: HTMLDivElement;
 

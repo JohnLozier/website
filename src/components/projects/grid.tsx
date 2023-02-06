@@ -1,4 +1,4 @@
-import { Setter, createEffect, createSignal, lazy } from 'solid-js';
+import { Setter, createEffect, createSignal, lazy } from "solid-js";
 
 import type ProjectList from "../../types/project";
 import isVisable from "../../lib/transitions";
