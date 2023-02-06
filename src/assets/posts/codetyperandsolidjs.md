@@ -3,7 +3,7 @@
 title: CodeTyper + SolidJS
 preview: This post discusses the development of Codetyper and my thoughts on SolidJS.
 image: /svgs/languages/solidjs.svg
-date: 1675208999489
+date: 1675651249541 
 
 ---
 
