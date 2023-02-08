@@ -85,7 +85,7 @@ module.exports = {
 				"blur": "blur 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"loading": "loading 1.5s linear forwards",
 				"opacity": "opacity 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
-				"line": "line 2s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+				"line": "line 3s cubic-bezier(.01,.02,.03,1) forwards",
 				"appear": "appear 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"card": "card 1s cubic-bezier(0.4, 0, 0.2, 1) forwards",
 				"sub-title": "sub-title 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards",
