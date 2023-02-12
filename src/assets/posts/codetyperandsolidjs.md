@@ -11,7 +11,7 @@ date: 1675651249541
 
 My main inspiration behind [Codetyper](/codetyper) was [Monkeytype](https://monkeytype.com) which had a very nice UI and smooth experience. Monkeytype was really good for practicing wpm but lacked the option to practice typing with the syntax and patterns of writing code. So I decided to do it myself, I had also been longing to use typescript and try out some new frameworks other than react.
 
-<img src="../../../dist/images/codetyper.png" />
+<img src="/images/codetyper.png" />
 
 I decided to use GitHub's API to get a random code sample to type because GitHub has the biggest database and is used by almost everyone. The random file from GitHub is then cached and processed (a lot) to be a consistent format. Looking back on it this process was probably too overcomplicated and could have been simplified.
 
