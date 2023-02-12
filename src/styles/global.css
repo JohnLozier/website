@@ -5,7 +5,7 @@
 html, body, #root {
 	cursor: default;
 	width: 100vw;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	overscroll-behavior: none;
 }
 
