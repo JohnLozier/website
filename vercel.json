@@ -2,7 +2,7 @@
 	"rewrites": [
 		{
 			"source": "/_vercel/:match*",
-			"destination": "/:match*"
+			"destination": "/_vercel/:match*"
 		},
 		{
 			"source": "/(.*)",
