@@ -1,6 +1,6 @@
 import "./styles/global.css";
 
-import Analytics from "./lib/analytics";
+import Analytics from "./lib/vitals";
 import Cursor from "./components/cursor";
 import EasterEggs from "./lib/eastereggs";
 import { MetaProvider } from "@solidjs/meta";
