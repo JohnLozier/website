@@ -1,5 +1,6 @@
 import "./styles/global.css";
 
+import Analytics from "./lib/analytics";
 import Cursor from "./components/cursor";
 import EasterEggs from "./lib/eastereggs";
 import { MetaProvider } from "@solidjs/meta";
@@ -10,6 +11,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { render } from "solid-js/web";
 
 const App = () => {
+
+	Analytics();
 
 	dayjs.extend(relativeTime);
 
