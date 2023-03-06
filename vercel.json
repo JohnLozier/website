@@ -1,6 +1,10 @@
 {
 	"rewrites": [
 		{
+			"source": "/_vercel/:match*",
+			"destination": "/:match*"
+		},
+		{
 			"source": "/(.*)",
 			"destination": "/"
 		}
