@@ -1,6 +1,10 @@
 {
 	"rewrites": [
 		{
+			"source": "/_vercel/insights/script.js",
+			"destination": "/_vercel/insights/script.js"
+		},
+		{
 			"source": "/(.*)",
 			"destination": "/"
 		}

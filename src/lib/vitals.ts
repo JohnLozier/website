@@ -2,6 +2,7 @@ import { onCLS, onFCP, onFID, onLCP, onTTFB } from "web-vitals";
 
 import Axios from "axios";
 import type { Metric } from "web-vitals";
+import { inject } from "@vercel/analytics";
 
 const vitalsUrl = "https://vitals.vercel-analytics.com/v1/vitals";
 
@@ -41,6 +42,8 @@ const Vitals = () => {
 	onFID(sendToVercelAnalytics);
 	onLCP(sendToVercelAnalytics);
 	onTTFB(sendToVercelAnalytics);
+
+	inject();
 };
 
 export default Vitals;
