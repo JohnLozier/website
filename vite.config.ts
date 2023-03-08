@@ -40,6 +40,9 @@ const Config = defineConfig({
 	resolve: {
 		conditions: ["development", "browser"],
 	},
+	define: {
+		VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID
+	}
 });
 
 export default Config;
