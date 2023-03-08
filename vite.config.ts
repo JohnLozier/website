@@ -41,7 +41,7 @@ const Config = defineConfig({
 		conditions: ["development", "browser"],
 	},
 	define: {
-		VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID
+		VITE_VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID
 	}
 });
 

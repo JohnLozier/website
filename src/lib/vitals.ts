@@ -13,7 +13,7 @@ const getConnectionSpeed = () => {
 
 const sendToVercelAnalytics = (metric: Metric) => {
   const body = {
-    dsn: import.meta.env.VERCEL_ANALYTICS_ID,
+    dsn: import.meta.env.VITE_VERCEL_ANALYTICS_ID,
     id: metric.id,
     page: window.location.pathname,
     href: window.location.href,
