@@ -5,6 +5,7 @@ interface Project {
         url?: string;
         description: string;
         img: string;
+        alt: string;
     }[];
 };
 

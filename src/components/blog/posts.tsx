@@ -16,7 +16,7 @@ const Posts = (props: { delay?: boolean }) => {
 			Object.values(files).sort((a ,b) =>
 				dayJS(matter<Post>(b).attributes.date).valueOf() - dayJS(matter<Post>(a).attributes.date).valueOf()
 			).map((post, index) =>
-				<Item path={ Object.keys(files)[Object.values(files).indexOf(post)].match(/[^/.]+(?=\.)/)![0] } title={ matter<Post>(post).attributes.title } text={ matter<Post>(post).attributes.preview } date={ matter<Post>(post).attributes.date } image={ matter<Post>(post).attributes.image } delay={ props.delay ? index : undefined }/>
+				<Item path={ Object.keys(files)[Object.values(files).indexOf(post)].match(/[^/.]+(?=\.)/)![0] } title={ matter<Post>(post).attributes.title } text={ matter<Post>(post).attributes.preview } date={ matter<Post>(post).attributes.date } image={ matter<Post>(post).attributes.image } alt={ matter<Post>(post).attributes.alt } delay={ props.delay ? index : undefined }/>
 			)
 		}
 	</div>

@@ -20,7 +20,7 @@ const Card = (props: { shown: Accessor<Boolean>, selected: Accessor<string[]>, c
 	} class="ml-screen animate-card duration-300 relative xl:w-24 lg:w-20 lg:h-20 -mx-4 opacity-0 xl:h-24 w-16 h-16 rounded-[1.4rem] pointer hover:-translate-y-2 xl:hover:-translate-y-3 flex items-center justify-center shadow-[inset_0_2px_10px_2px_#0000000d,_0_4px_4px_0px_#00000040]" style={ {
 		"animation-delay": `${ props.index * 100 }ms`
 	} }>
-		<img draggable={ false } src={ `/svgs/languages/${ props.language }.svg` } class={ `${ props.selected().includes(props.name) ? "" : "grayscale "}m-3 transition-filter select-none duration-500` } />
+		<img alt={ props.name } draggable={ false } src={ `/svgs/languages/${ props.language }.svg` } class={ `${ props.selected().includes(props.name) ? "" : "grayscale "}m-3 transition-filter select-none duration-500` } />
 	</div>
 };
 

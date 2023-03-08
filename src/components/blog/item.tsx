@@ -4,7 +4,7 @@ import { createEffect } from "solid-js";
 import dayJS from "dayjs";
 import isVisable from "../../lib/transitions";
 
-const Item = (props: { path: string, title: string, text: string, date: string, image: string, delay?: number }) => {
+const Item = (props: { path: string, title: string, text: string, date: string, image: string, alt: string, delay?: number }) => {
 	let post: HTMLAnchorElement;
 
 	const shown = isVisable(() => post);
@@ -27,7 +27,7 @@ const Item = (props: { path: string, title: string, text: string, date: string, 
 		</div>
 		<div class="bg-highlight/70 h-44 self-center max-w-[22rem] min-w-[11rem] rounded-md p-2 mb-3 w-fit overflow-hidden">
 			<div class="hover:scale-105 overflow-hidden rounded-lg flex items-center min-w-[10rem] h-40 transition-transform duration-500">
-				<img draggable={ false } src={ `${ props.image }` } />
+				<img alt={ props.alt } draggable={ false } src={ `${ props.image }` } />
 			</div>
 		</div>
 	</a>
